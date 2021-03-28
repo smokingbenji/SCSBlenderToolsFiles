@@ -4,7 +4,7 @@ Header {
     Note: "Shader Presets for SCS Blender Tools"
     Author: "Simon Lusenc (50keda)"
     Version: 2
-    Date: "2017-10-03"
+    Date: "2021-28-03"
 }
 Shader {
     PresetName: "building.add.env.day"
@@ -41,10 +41,10 @@ Shader {
         Value: ( 0.2 0.9 )
     }
     Attribute {
-        Format: FLOAT2
+        Format: FLOAT
         Tag: "aux[5]"
-        FriendlyTag: "Luminance & night adpt(?)"
-        Value: ( 50.0 0.0 )
+        FriendlyTag: "Luminance Boost"
+        Value: ( 0.0 )
     }
     Texture {
         Tag: "texture[X]:texture_base"
@@ -82,10 +82,10 @@ Shader {
         Value: ( 0.0 )
     }
     Attribute {
-        Format: FLOAT2
+        Format: FLOAT
         Tag: "aux[5]"
-        FriendlyTag: "Luminance & night adpt(?)"
-        Value: ( 50.0 0.0 )
+        FriendlyTag: "Luminance Boost"
+        Value: ( 0.0 )
     }
     Texture {
         Tag: "texture[X]:texture_base"
@@ -118,10 +118,10 @@ Shader {
         Value: ( 0.0 )
     }
     Attribute {
-        Format: FLOAT2
+        Format: FLOAT
         Tag: "aux[5]"
-        FriendlyTag: "Luminance & night adpt(?)"
-        Value: ( 50.0 0.0 )
+        FriendlyTag: "Luminance Boost"
+        Value: ( 0.0 )
     }
     Texture {
         Tag: "texture[X]:texture_base"
@@ -154,10 +154,10 @@ Shader {
         Value: ( 0.0 )
     }
     Attribute {
-        Format: FLOAT2
+        Format: FLOAT
         Tag: "aux[5]"
-        FriendlyTag: "Luminance & night adpt(?)"
-        Value: ( 50.0 0.0 )
+        FriendlyTag: "Luminance Boost"
+        Value: ( 0.0 )
     }
     Texture {
         Tag: "texture[X]:texture_base"
@@ -190,10 +190,10 @@ Shader {
         Value: ( 0.0 )
     }
     Attribute {
-        Format: FLOAT2
+        Format: FLOAT
         Tag: "aux[5]"
-        FriendlyTag: "Luminance & night adpt(?)"
-        Value: ( 50.0 0.0 )
+        FriendlyTag: "Luminance Boost"
+        Value: ( 0.0 )
     }
     Texture {
         Tag: "texture[X]:texture_base"
@@ -1277,7 +1277,7 @@ Shader {
         Tag: "aux[5]"
         FriendlyTag: "Luminance & night adpt(?)"
         Value: ( 5000.0 10.0 )
-    } 
+    }
     Texture {
         Tag: "texture[X]:texture_base"
         Value: "/model/flare/flare"
@@ -1301,17 +1301,12 @@ Shader {
     Attribute {
         Format: FLOAT
         Tag: "shininess"
-        Value: ( 95.0 )
+        Value: ( 97.0 )
     }
     Attribute {
         Format: FLOAT
         Tag: "add_ambient"
         Value: ( 0.0 )
-    }
-    Attribute {
-        Format: FLOAT3
-        Tag: "env_factor"
-        Value: ( 3.0 3.0 3.0 )
     }
     Attribute {
         Format: FLOAT2
@@ -1321,17 +1316,12 @@ Shader {
     Attribute {
         Format: FLOAT3
         Tag: "tint"
-        Value: ( 0.78 0.8 0.79 )
+        Value: ( 0.97 0.97 0.97 )
     }
     Attribute {
         Format: FLOAT
         Tag: "tint_opacity"
-        Value: ( -0.01 )
-    }
-    Attribute {
-        Format: INT
-        Tag: "queue_bias"
-        Value: ( 0 )
+        Value: ( 0.0 )
     }
     Texture {
         Tag: "texture[X]:texture_base"
@@ -1440,6 +1430,12 @@ Shader {
         Value: ""
         TexCoord: ( 0 )
     }
+    Attribute {
+        Format: FLOAT2
+        Tag: "aux[5]"
+        FriendlyTag: "Luminance & night adpt(?)"
+        Value: ( 2000.0 10.0 )
+    }
 }
 Shader {
     PresetName: "lightmap.night"
@@ -1470,6 +1466,12 @@ Shader {
         Tag: "texture[X]:texture_base"
         Value: ""
         TexCoord: ( 0 )
+    }
+    Attribute {
+        Format: FLOAT2
+        Tag: "aux[5]"
+        FriendlyTag: "Luminance & night adpt(?)"
+        Value: ( 2000.0 10.0 )
     }
 }
 Shader {
@@ -1527,7 +1529,7 @@ Shader {
     Attribute {
         Format: FLOAT
         Tag: "shadow_bias"
-        Value: ( 0.0 )
+        Value: ( -0.05 )
     }
 }
 Shader {
@@ -1670,7 +1672,7 @@ Shader {
         Tag: "aux[5]"
         FriendlyTag: "Luminance & night adpt(?)"
         Value: ( 2000.0 10.0 )
-    }    
+    }
     Texture {
         Tag: "texture[X]:texture_base"
         Value: ""
@@ -2052,7 +2054,7 @@ Flavor {
     Attribute {
         Format: FLOAT
         Tag: "shadow_bias"
-        Value: ( 0.0 )
+        Value: ( -0.05 )
     }
 }
 Flavor {
